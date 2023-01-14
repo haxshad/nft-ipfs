@@ -7,16 +7,10 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 
 contract LW3Punks is ERC721Enumerable, Ownable {
     using Strings for uint256;
-    /**
-     * @dev _baseTokenURI for computing {tokenURI}. If set, the resulting URI for each
-     * token will be the concatenation of the `baseURI` and the `tokenId`.
-     */
     string _baseTokenURI;
 
-    //  _price is the price of one LW3Punks NFT
     uint256 public _price = 0.01 ether;
 
-    // _paused is used to pause the contract in case of an emergency
     bool public _paused;
 
     // max number of LW3Punks
